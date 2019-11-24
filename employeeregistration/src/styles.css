@@ -1,1 +1,179 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #f3fbfd !important;
+    font-family: Lato !important;
+    color: #00303f !important;
+}
+a {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.breadcrumb {
+    font-family: Lato !important;
+    font-size: 0.8em !important;
+    font-weight: normal !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    background: #F3FBFD !important;
+    padding: 10px 5px !important;
+}
+
+/*breadcrum*/
+.breadcrumb {
+    font-family: Lato !important;
+    font-size: 0.8em !important;
+    font-weight: normal !important;
+    margin: 0 !important;
+    padding-left: 0 !important;
+    background: #F3FBFD !important;
+    padding: 10px 5px !important;
+}
+
+.breadcrumb>li {
+    color: #76323f;
+}
+
+.breadcrumb>li>a {
+    color: #00303f !important;
+}
+
+.breadcrumb>.active {
+    color: #00303f !important;
+}
+
+.breadcrumb>li>a {
+    color: #76323f !important;
+}
+/*Breadcrumb End*/
+   
+/*bootstrap alerts*/
+.success,
+.alert-success {
+    position: fixed !important;
+    color: #3c763d !important;
+    background-color: #dff0d8 !important;
+    border-color: #d6e9c6 !important;
+    font-family: Lato !important;
+    font-size: 0.875em !important;
+    left: 300px !important;
+    z-index: 10000 !important;
+    left: 25em !important;
+    top: 51px !important;
+    right: 25em !important;
+    width: auto !important;
+}
+
+.error,
+.alert-error {
+    background-color: #f2dede !important;
+    border-color: #ebccd1 !important;
+    color: #76323f !important;
+    position: fixed !important;
+    font-family: Lato !important;
+    font-size: 0.875em !important;
+    left: 300px !important;
+    z-index: 10000 !important;
+    left: 25em !important;
+    top: 51px !important;
+    right: 25em !important;
+    width: auto !important;
+}
+
+.default-message {
+    color: #00303f !important;
+    font-size: 1.4em !important;
+    font-family: Lato !important;
+    text-align: center !important;
+}
+/*end of bootstrap alerts */
+
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.save-button,
+.reset-button,
+.delete-button,
+.cancel-button,
+.ok-button,
+.submit-button,
+.other-button,
+.back-button {
+    color: white !important;
+    font-family: Lato !important;
+    font-size: 1em !important;
+    border-radius: 3px !important;
+    padding: 4px 12px !important;
+    margin: 3px;
+}
+
+.save-button {
+    background-color: #3d9970 !important;
+}
+
+.reset-button {
+    background-color: #af473c !important;
+}
+
+.edit-icon {
+    font-size: 0.875em !important;
+    color: #0078a3 !important;
+    cursor: pointer !important;
+}
+
+.edit-icon-disabled {
+    font-size: 0.875em !important;
+    color: #0078a3 !important;
+    cursor: pointer !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+}
+
+.delete-icon {
+    font-size: 1em !important;
+    color: #af473c !important;
+    cursor: pointer !important;
+}
+
+.delete-icon-disabled {
+    font-size: 1em !important;
+    color: #af473c !important;
+    cursor: pointer !important;
+    pointer-events: none !important;
+    opacity: 0.5 !important;
+}
+
+.cancel-button {
+    background-color: grey !important;
+}
+
+.ok-button {
+    background-color: #4a8bca !important;
+}
+
+.submit-button {
+    background-color: #4a8bca !important;
+}
+
+.delete-button {
+    background-color: #af473c !important;
+}
+
+.other-button {
+    background-color: #00303f !important;
+}
+.back-button {
+    color: #00303f !important;
+    background: transparent !important;
+    display: inline-block !important;
+}

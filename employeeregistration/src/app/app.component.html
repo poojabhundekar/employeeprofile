@@ -1,1 +1,20 @@
 <router-outlet></router-outlet>
+<!--Alert Messages for the end user to make them understand what result the got based on their action -->
+
+ 
+  
+<div class="alert alert-success alert-dismissible success" *ngIf="isSuccess" >
+
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Success!</strong> {{successMessage}}
+</div>
+
+<div class="alert alert-danger alert-dismissible error" *ngIf="isError">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Error!</strong> {{errorMessage}}
+</div>
+
+<div class="alert alert-warning alert-dismissible" *ngIf="isWarning">
+  <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+  <strong>Warning!</strong> {{warningMessage}}
+</div>

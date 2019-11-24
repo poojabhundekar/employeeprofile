@@ -1,3 +1,6 @@
-.table {
-    padding:    4%
+.tablecss {
+    padding-left:    4%;
+    padding-right:    4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
 }

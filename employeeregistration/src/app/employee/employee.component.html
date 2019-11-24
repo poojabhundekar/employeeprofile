@@ -1,30 +1,54 @@
-<p>employee works!</p>
+<!-- -------------------- Bread Crumb starts here -------------- -->
 <div class="row">
-<div class="col-md-12 col-sm-10">
+  <div class="col-md-4 col-sm-4">
+    <ol class="breadcrumb">
+      <li><a> <i class="fa fa-users" aria-hidden="true"></i>&nbsp;Employee Maagement</a></li>
+      <li class="active">&nbsp;/&nbsp;view</li>
+    </ol>
+  </div>
+</div>
+<div class="row">&nbsp;</div>
+<!-- -------------------- Bread Crumb ends here -------------- -->
+<div class="row">
+    &nbsp;
+</div>
+<div class="row">
+    <div class="col-md-12 col-sn-12 text-center">
+     <h4><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Employee Maagement</h4>
+    </div>
+</div>
+<div class="">
+</div>
+<div class="row">
+    <div class="col-md-12 col-sm-10 tablecss text-right">
+        <button class="other-button">Add Employee&nbsp;<i class="fa fa-plus-circle" aria-hidden="true"></i></button>
+    </div>
+<div class="col-md-12 col-sm-10 tablecss">
     <table class="table table-striped">
     <thead>
       <tr>
         <th>Firstname</th>
         <th>Lastname</th>
-        <th>Email</th>
+        <th>Gender</th>
+        <!--<th>Date of Birth</th>-->
+        <th>Department</th>
+        <th>Edit</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
+     <tr *ngFor="let emp of employeeList; let i=index;">
+         
+          <td>{{emp.firstName}}</td>
+          <td>{{emp.lastName}}</td>
+          <td>{{emp.gender}}</td>
+          <!--<td>{{emp.dob}}</td>-->
+          <td>{{emp.department}}</td>
+           <td class="pointer" title="Edit"><i class="fa fa-pencil edit-icon" aria-hidden="true">
+            </i></td>
+            <td class="pointer" title="Delete"><i class="fa fa-trash delete-icon"
+              aria-hidden="true"></i></td>
+     </tr>
     </tbody>
   </table>
 </div>
