@@ -9,12 +9,14 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AddEmployeeComponent implements OnInit {
   employeeForm: FormGroup;
+  departmentList:any = ["Software","Harddware"];
   constructor(private router : Router ) { }
   ngOnInit() {
     this.employeeForm = new FormGroup({
       firstName: new FormControl(),
       lastName: new FormControl(),
       gender: new FormControl()
+      // department:[""]
     });
   }
   gobackToViewScreen(){

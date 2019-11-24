@@ -1,27 +1,22 @@
-# Employeeregistration
+# Employee Profile
+Employee profile management app for sosgen.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+## Technical Specifications
+* Spring-boot backend
+    * Unit-testing for custom query in repository
+* Angular-8 frontend
 
-## Development server
+    * Material Design byb material.angular.io
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Requirement Specifications
+* CRUD Employee
+* List all the employee data in tabular form
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## How-to
+* Clone this git
+* Go to employee-backend folder and run `mvn spring-boot:run`
+* Spring-boot will run on `localhost:8080`
+* Go to employee-frontend folder and run `npm install` and then `npm start`
+* Angular-8 will run on `localhost:4200`
+* Work well on Chrome in `1366 x 768` Resolution

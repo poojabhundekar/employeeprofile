@@ -28,6 +28,11 @@ export class EmployeeComponent implements OnInit {
 }
 
 export const list : Employee[]=[{
+  firstName: 'Sumedh',
+  lastName: 'K',
+  gender: 'MALE',
+  department:'Software'
+},{
   firstName: 'Pooja',
   lastName: 'H',
   gender: 'FEMALE',
