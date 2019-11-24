@@ -21,9 +21,9 @@ export class AddEmployeeComponent implements OnInit {
     this.employeeForm = this.formBuilder.group({
       firstName: ['',  Validators.required],
       lastName: ['',  Validators.required],
+      gender: ['',  Validators.required],
       department: ['',  Validators.required], 
-    }
-    );
+    });
   }
   gobackToViewScreen(){
         this.router.navigate(['employees']);

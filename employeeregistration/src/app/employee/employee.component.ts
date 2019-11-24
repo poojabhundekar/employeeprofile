@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor(private appComponent : AppComponent, private router : Router) { }
+  constructor(private appComponent : AppComponent, private router : Router, ) { }
 
  employeeList : Employee[] = [];
   ngOnInit() {
@@ -25,14 +25,22 @@ export class EmployeeComponent implements OnInit {
     console.log('ADD EMPLOYEE');
     this.router.navigate(['add-employee']);
   }
+  editEmployee(id){
+    console.log('edit id = '+ id);
+  }
+  deleteEmployee(id){
+    console.log('deletre id = '+ id);
+  }
 }
 
 export const list : Employee[]=[{
+  id: 'Emp1',
   firstName: 'Sumedh',
   lastName: 'K',
   gender: 'MALE',
   department:'Software'
 },{
+  id: 'Emp2',
   firstName: 'Pooja',
   lastName: 'H',
   gender: 'FEMALE',

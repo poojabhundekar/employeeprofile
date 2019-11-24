@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
+import { AddEmployeeService } from './add-employee/add-employee.service';
+import { EmployeeService } from './employee/employee.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [AddEmployeeService, EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
