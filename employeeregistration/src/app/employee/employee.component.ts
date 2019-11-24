@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from './entity/employee';
 import { AppComponent } from './../app.component' ;
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -8,17 +10,20 @@ import { AppComponent } from './../app.component' ;
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor(private appComponent : AppComponent) { }
+  constructor(private appComponent : AppComponent, private router : Router) { }
 
  employeeList : Employee[] = [];
   ngOnInit() {
-    console.log('calling');
-this.getEmployees();
+    this.getEmployees();
   }
 
   getEmployees(){
     this.employeeList =list;
-    console.log(this.employeeList);
+  }
+
+  addEmployee(){
+    console.log('ADD EMPLOYEE');
+    this.router.navigate(['add-employee']);
   }
 }
 
