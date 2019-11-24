@@ -13,7 +13,7 @@
 </div>
 <div class="row">&nbsp;</div>
 <!-- -------------------- Bread Crumb ends here -------------- -->
-
+<div class="container">
 <form [formGroup]=" employeeForm" (ngSubmit)="onSubmit()" class="form-horizontal">
     <div class="panel panel-primary">
         <div class="panel-heading"> 
@@ -21,17 +21,28 @@
         </div>
         <div class="panel-body">
             <div class="form-group">
-                <label class="col-md-2 col-sm-2 control-label" for="firstName">First Name</label>
+                <!--<label class="col-md-2 col-sm-2 control-label" for="firstName">First Name</label>
                 <div class="col-md-8 col-sm-8">
                     <input id="firstName" formControlName = "firstName" type="text" class="form-control">
-                </div>
+                </div>-->
+                <label>First Name</label>
+                    <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                    <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                        <div *ngIf="f.firstName.errors.required">First Name is required</div>
+                    </div>
             </div>
 
             <div class="form-group">
-                <label class="col-md-2 col-sm-2 control-label" for="lastName">Last Name</label>
+                <!--<label class="col-md-2 col-sm-2 control-label" for="lastName">Last Name</label>
                 <div class="col-md-8 col-sm-8">
                     <input id="lastName"  formControlName = "lastName" type="text" class="form-control">
-                </div>
+                </div>-->
+
+                <label>Last Name</label>
+                    <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                    <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                        <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+                    </div>
             </div>
 
             <div class="form-grooup">
@@ -53,21 +64,25 @@
                 </div>
             </div>
 
-            <div class="form-group">
-                <select class="custom-select" (change)="deptChanged($event)" formControlName="department">
-                    <option value="" disabled>Choose your option</option>
-                <option *ngFor="let dept of departmentList" [ngValue]="dept">{{dept}}</option>
-                </select>
-                
-            </div>
+           
 
-
-
+            <div class="form-group col-5">
+                    <label>Department</label>
+                    <select formControlName="department" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.department.errors }">
+                        <option value=""></option>
+                        <option value="Micro Services">Micro Services</option>
+                        <option value="Web Design">Web Design</option>
+                        <option value="Mobile application Development">Mobile application Development</option>
+                        <option value="Machine Learning">Machine Learning</option>
+                    </select>
+                    <div *ngIf="submitted && f.department.errors" class="invalid-feedback">
+                        <div *ngIf="f.department.errors.required">department is required</div>
+                    </div>
+                </div>
         </div>
-
         <div class="panel-footer">
             <button class="btn btn-primary" type="submit">Save</button>
         </div>
     </div>
-
 </form>
+</div>
