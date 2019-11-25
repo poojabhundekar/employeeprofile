@@ -24,6 +24,8 @@ export class AddEmployeeComponent implements OnInit {
       gender: ['',  Validators.required],
       department: ['',  Validators.required], 
     });
+    this.employeeForm.controls['gender'].setValue('MALE');
+    this.employeeForm.controls['department'].setValue(this.departmentList[0]);
   }
   gobackToViewScreen(){
         this.router.navigate(['employees']);
@@ -33,5 +35,10 @@ export class AddEmployeeComponent implements OnInit {
     console.log('hii');
     console.log(this.employeeForm.value);
   }
+
+//   get f() { 
+//   return this.employeeForm.controls;
+//  }
+
 
 }

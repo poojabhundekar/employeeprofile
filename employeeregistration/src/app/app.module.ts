@@ -8,6 +8,8 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ReactiveFormsModule } from '@angular/forms'; 
 import { AddEmployeeService } from './add-employee/add-employee.service';
 import { EmployeeService } from './employee/employee.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,8 @@ import { EmployeeService } from './employee/employee.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [AddEmployeeService, EmployeeService],
   bootstrap: [AppComponent]
