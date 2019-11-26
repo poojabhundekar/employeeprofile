@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AddEmployeeService } from './add-employee/add-employee.service';
 import { EmployeeService } from './employee/employee.service';
 import { HttpClientModule } from '@angular/common/http';
+import { DatePickerModule } from '@syncfusion/ej2-angular-calendars';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DatePickerModule
   ],
   providers: [AddEmployeeService, EmployeeService],
   bootstrap: [AppComponent]

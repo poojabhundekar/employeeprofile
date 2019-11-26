@@ -9,7 +9,7 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
-  localUrl = 'http://localhost:8080/api';
+  localUrl = 'http://localhost:9090/api';
 
   getAllEmployees() {
         return this.http.get<Employee[]>(this.localUrl + '/employees');
@@ -19,4 +19,12 @@ export class EmployeeService {
         return this.http.get(this.localUrl + '/employees/get-emp/' + id);
     }
 
+    deleteEmployee(id: number) {
+      const httpOptions = {
+          headers: new HttpHeaders({
+              'Content-Type': 'application/json'
+          })
+      };
+      return this.http.delete(this.localUrl + '/employees/delete-emp/' + id,  httpOptions);
+  }
 }

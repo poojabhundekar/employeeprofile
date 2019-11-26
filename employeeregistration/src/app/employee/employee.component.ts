@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../entity/employee';
-import { AppComponent } from './../app.component' ;
+import { AppComponent } from './../app.component';
 import { Router } from '@angular/router';
+import { EmployeeService } from './employee.service';
 
 @Component({
   selector: 'app-employee',
@@ -10,39 +11,26 @@ import { Router } from '@angular/router';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor(private appComponent : AppComponent, private router : Router, ) { }
+  constructor(private appComponent: AppComponent, private router: Router, private employeeService: EmployeeService) { }
 
- employeeList : Employee[] = [];
+  employeeList: Employee[] = [];
   ngOnInit() {
     this.getEmployees();
   }
 
-  getEmployees(){
-    this.employeeList =list;
+  getEmployees() {
+    this.employeeService.getAllEmployees().subscribe(users => {
+      this.employeeList = users;
+    });
   }
 
-  addEmployee(){
-    console.log('ADD EMPLOYEE');
+  addEmployee() {
     this.router.navigate(['add-employee']);
   }
-  editEmployee(id){
-    console.log('edit id = '+ id);
-  }
-  deleteEmployee(id){
-    console.log('deletre id = '+ id);
+
+  deleteEmployee(id) {
+    this.employeeService.deleteEmployee(id).subscribe(() => {
+      this.getEmployees();
+    }, () => this.getEmployees());
   }
 }
-
-export const list : Employee[]=[{
-  id: 'Emp1',
-  firstName: 'Sumedh',
-  lastName: 'K',
-  gender: 'MALE',
-  department:'Software'
-},{
-  id: 'Emp2',
-  firstName: 'Pooja',
-  lastName: 'H',
-  gender: 'FEMALE',
-  department:'Software'
-}];

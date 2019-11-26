@@ -10,50 +10,49 @@
 <div class="row">&nbsp;</div>
 <!-- -------------------- Bread Crumb ends here -------------- -->
 <div class="row">
-    &nbsp;
+  &nbsp;
 </div>
 <div class="row">
-    <div class="col-md-12 col-sn-12 text-center">
-     <h4><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Employee Maagement</h4>
-    </div>
+  <div class="col-md-12 col-sn-12 text-center">
+    <h4><i class="fa fa-users" aria-hidden="true"></i>&nbsp;Employee Management</h4>
+  </div>
 </div>
 <div class="">
 </div>
 <div class="row">
-    <div class="col-md-12 col-sm-10 tablecss text-right">
-        <button class="other-button " (click)="addEmployee()">Add Employee&nbsp;
-            <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </button>
-    </div>
-<div class="col-md-12 col-sm-10 tablecss" *ngIf="employeeList.length>0; else noemplorees">
+  <div class="col-md-12 col-sm-10 tablecss text-right">
+    <button class="other-button " (click)="addEmployee()">Add Employee&nbsp;
+      <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </button>
+  </div>
+  <div class="col-md-12 col-sm-10 tablecss" *ngIf="employeeList.length>0; else noemplorees">
     <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Firstname</th>
-        <th>Lastname</th>
-        <th>Gender</th>
-        <!--<th>Date of Birth</th>-->
-        <th>Department</th>
-        <th>Edit</th>
-        <th>Delete</th>
-      </tr>
-    </thead>
-    <tbody>
-     <tr *ngFor="let emp of employeeList; let i=index;">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Gender</th>
+          <!--<th>Date of Birth</th>-->
+          <th>Department</th>
+
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let emp of employeeList; let i=index;">
           <td>{{emp.firstName}}</td>
           <td>{{emp.lastName}}</td>
           <td>{{emp.gender}}</td>
           <!--<td>{{emp.dob}}</td>-->
           <td>{{emp.department}}</td>
-           <td class="pointer" (click)="editEmployee(emp.id)" title="Edit"><i class="fa fa-pencil edit-icon" aria-hidden="true">
-            </i></td>
-            <td class="pointer" (click)="deleteEmployee(emp.id)" title="Delete"><i class="fa fa-trash delete-icon"
+
+          <td class="pointer" (click)="deleteEmployee(emp.id)" title="Delete"><i class="fa fa-trash delete-icon"
               aria-hidden="true"></i></td>
-     </tr>
-    </tbody>
-  </table>
-</div>
-<ng-template #noemplorees>
-  <div class="col-md-12 col-sm-12 default-message text-center">Employee deta not available!!! </div>
-</ng-template>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ng-template #noemplorees>
+    <div class="col-md-12 col-sm-12 default-message text-center">Employee deta not available!!! </div>
+  </ng-template>
 </div>
