@@ -20,8 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule,
-    DatePickerModule
+    HttpClientModule
   ],
   providers: [AddEmployeeService, EmployeeService],
   bootstrap: [AppComponent]
