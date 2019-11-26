@@ -9,7 +9,7 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
-  localUrl = 'http://localhost:9090/api';
+  localUrl = 'http://localhost:9090/empapiserver';
 
   getAllEmployees() {
         return this.http.get<Employee[]>(this.localUrl + '/employees');
