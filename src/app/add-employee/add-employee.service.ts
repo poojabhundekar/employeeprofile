@@ -9,10 +9,10 @@ export class AddEmployeeService {
 
     constructor(private http: HttpClient) { }
 
-    localUrl = 'http://192.168.1.29:8090/empapiserver';
+    localUrl = 'http://localhost:9090/empapiserver';
 
     addEmployee(employee: Employee) {
-        return this.http.post(this.localUrl + '/user/save-users', employee);
+        return this.http.post(this.localUrl + '/user/save-user', employee);
     }
 
 }
